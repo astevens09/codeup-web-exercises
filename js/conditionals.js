@@ -59,25 +59,26 @@ console.log(analyzeColor(randomColor));
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 function analyzeColor(color){
+
   color = color.toLowerCase();
 
   switch(color){
-    case blue: return "The ocean is blue as well.";
+    case "blue": return "The ocean is blue as well.";
     break;
 
-    case red:return "Red is the best color for a Ferarri!";
+    case "red":return "Red is the best color for a Ferarri!";
     break;
 
-    case yellow:return "Sunflowers have yellow.";
+    case "yellow":return "Sunflowers have yellow.";
     break;
 
-    case orange:return "Just like an orange fruit.";
+    case "orange":return "Just like an orange fruit.";
     break;
 
-    case black:return "Santa brings coal that is black too.";
+    case "black":return "Santa brings coal that is black too.";
     break;
 
-    case green:return "Yellow and blue make green.";
+    case "green":return "Yellow and blue make green.";
     break;
 
     default: return "I don't know anything about "+color;
@@ -90,6 +91,8 @@ function analyzeColor(color){
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+ var userColor = prompt("Enter color: ");
+ alert(analyzeColor(userColor));
 
 /* ########################################################################## */
 
@@ -112,7 +115,22 @@ function analyzeColor(color){
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
+ function calculateTotal(luckyNum, total){
+   if(luckyNum==0)
+    return total;
+  else if(luckyNum==1)
+    return total-(total*.1);
+  else if(luckyNum==2)
+    return total-(total*.25);
+  else if(luckyNum==3)
+    return total-(total*.35);
+  else if(luckyNum==4)
+    return total-(total*.5);
+  else if(luckyNum==5)
+    return 0;
+  else
+    return "The lucky number entered has to be between 0 and 5.";
+ }
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -122,7 +140,11 @@ function analyzeColor(color){
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+var userBill = prompt("Enter bill total: ");
+alert("Your lucky number was "+luckyNumber+"."+
+      "\nYour price before discount is $"+userBill+
+      "\nYour price after the discount $"+calculateTotal(luckyNumber,userBill));
 
 /**
  * TODO:
@@ -142,3 +164,31 @@ function analyzeColor(color){
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+ var userConfirm = confirm("Would you like to enter a number?");
+
+if(userConfirm){
+    //Ask the user for input and convert to a number
+   var userNum = Number(prompt("Enter a number: "));
+
+    //This statement test if the user entered a number.
+    if(isNaN(userNum)){
+        alert("Your input is not a number.");
+
+    }else{
+        promptUser();
+
+ };
+
+//This function definition prompts the user for input
+function promptUser(){
+    //This statement uses the ternary operator to test if the user's number is even or odd
+   var evenOdd = userNum%2===0? "even" : "odd";
+
+   //This statement uses the ternary operator to test if the user's number is negative or positive
+   var posNeg = userNum <0? "negative" : "positive";
+
+   alert("The number you entered is "+evenOdd);
+   alert("Your number plus 100 is "+(userNum+100));
+   alert("Your number is "+posNeg);
+    };
+};
