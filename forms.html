@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register with Us</title>
+  </head>
+  <body>
+    <form action="https://request-inspector.glitch.me/" method="POST">
+
+        <section>
+            <label for="email">
+                <input type="text" name="email" id="email" placeholder="Enter Email"/>
+              </label>
+              <label for="password">
+                <input type="password" name="password" id="password" placeholder="Enter Password"/>
+              </label>
+        </section>
+      
+
+      <textarea name="bio" id="" cols="30" rows="10" placeholder="Tell us about yourself"></textarea>
+
+      <section>
+        <h2>How did you hear about us?</h2>
+        <label for="billboard">
+          billboard
+          <input id="billboard" type="checkbox" name="phones" value="billboard" />
+        </label>
+        <label for="radioAd">
+          radioAd <input id="radioAd" type="checkbox" name="phones" value="radioAd" />
+        </label>
+        <label for="internetAd">
+          internetAd
+          <input id="internetAd" type="checkbox" name="phones" value="internetAd" />
+        </label>
+        <label for="other">
+          Other <input id="other" type="checkbox" name="phones" value="other" />
+        </label>
+      </section>
+      <br>  
+      <section>
+        <label for="browser_type">
+        <h2>Browser Type</h2>
+        <select name="browser_type">
+            <option value="chrome">Chrome</option>
+            <option value="safari">Safari</option>
+            <option value="edge">Microsoft Edge</option>
+        </label>
+        </select>
+      </section>
+      <br>
+
+      <button type="submit">Give Me Your Data</button>
+    </form>
+  </body>
+</html>
