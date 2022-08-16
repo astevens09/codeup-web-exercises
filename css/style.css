@@ -1,0 +1,27 @@
+.fancy-header {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+    text-align: center;
+}
+
+h1, h2{
+    text-decoration: underline;
+    color: #002B5B;
+}
+
+body{
+    background-color: #8FE3CF;
+    font-family: Optima;
+}
+
+ul.a{
+    list-style-type: circle;
+}
+
+table{
+    border: black solid 1px;
+    width: 50%;
+}
+a:hover{
+    color: red
+}
