@@ -78,6 +78,7 @@ a {
 
 .profile-image{
     position: absolute;
+    top: 230px;
 }
 
 .profile-form{
