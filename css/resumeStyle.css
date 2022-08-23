@@ -1,0 +1,31 @@
+body{
+  margin: 4em;
+}
+
+header *{
+  margin: 15px 0;
+}
+
+.col-lg-3{
+  padding: 0;
+}
+
+.col-lg-9{
+  padding: 0;
+}
+
+
+.container{
+  padding: 0;
+}
+
+.row{
+  margin: 0;
+}
+
+@media screen and (min-width:768px) {
+  .firstBreak{
+    padding: 0;
+    padding-left: 80px;
+  }
+}
