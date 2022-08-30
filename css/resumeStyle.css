@@ -6,6 +6,10 @@ header *{
   margin: 15px 0;
 }
 
+h3{
+  color: blue;
+}
+
 .col-lg-3{
   padding: 0;
 }
