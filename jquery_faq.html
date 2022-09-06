@@ -65,19 +65,60 @@
 
 <a href="#" id="visibilityLink">Click me to see descriptions </a>
 
+<h3 id="national-parks-heading">National Parks</h3>
+<ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+</ul>
+<h3 id="texas-parks-heading">State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+</ul>
+<h3 id="washington-parks-heading">State Parks of Washington Dc</h3>
+<ul id="state-parks-washington">
+    <li>National Mall & Memorial Parks</li>
+    <li>Rock Creek Park</li>
+    <li>Kenilworth Park & Aquatic Gardens</li>
+</ul>
+<button class="highlightListItems">Highlight</button>
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
     $('document').ready(function() {
+        //Turn invisibility on or off when link is clicked
         $('#visibilityLink').click(function(event) {
             event.preventDefault();
             $('dd').toggleClass('invisible');
         });
 
+        //Highlights or unhighlights term when clicked
         $('dt').click(function(event) {
             // event.preventDefault();
             $(this).toggleClass('highlighted');
+        });
+
+        //Bolds all list items on clicked h3 element
+        $('h3').click(function (){
+            $(this).next().children().css('font-weight','bold');
+        });
+
+        //Highlights the last list item in each unordered list when button clicked
+        $('.highlightListItems').click(function (){
+            // $('li').last().css('background-color', 'grey');
+            $('ul').each(function(i, ele){
+                $(this).children().last().css('background-color', 'yellow');
+            });
+        });
+
+        //Highlight first list item in list when any list item is clicked
+        $('li').click(function (){
+            // $(this).css('background-color', 'blue');
+            $(this).parent().children().first().css('background-color', 'blue');
         });
     });
 </script>
