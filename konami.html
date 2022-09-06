@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" src="/js/jquery.js"></script>
+<script>
+    "use strict";
+    // $(document).keyup(function(event){
+    //     console.log(event.key);
+    // });
+
+    let code = [38,38,40,40,37,39,37,39,66,65,13];
+    let inputs = [];
+    let inputLength = 0;
+    let matchedInputs = 0;
+
+
+    //To test for Konami Code input
+        //1.Pushed key input from user in array
+        //2.Checked if enter was pressed (keyCode 13)
+        //3.Check if input length is long enough to check for Konami Code input
+        //4.Use forEach() method on Konami code array. Each element in the Konami array
+            //compared against the last 10 element of the user input array
+    $(document).keyup(function(event){
+        inputs.push(event.keyCode); //Step 1
+        if(event.keyCode === 13){   //Step 2
+            if(inputs.length >= 10){//Step 3
+                code.forEach((ele, i)=>{ //Step 4
+                    if(ele === inputs[inputs.length - 11+i]){ //Step 4 cont.
+                        matchedInputs++;
+                    }else{
+                        matchedInputs = 0;
+                    }
+                });
+                if(matchedInputs == 11)
+                    alert('You have added 30 lives!');
+            }
+            }
+
+
+
+    });
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
