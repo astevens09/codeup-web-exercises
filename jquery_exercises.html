@@ -9,21 +9,22 @@
 </head>
 <body>
 <h1 class="codeup">Hello</h1>
-<p id="codeup"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+<p id="codeup"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+    dolore magna
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
     sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
 
 <h2 class="">My hobbies</h2>
 
-<ul class="codeup" >
-  <li>Coding</li>
-  <li>Exercising</li>
-  <li>Sleep</li>
+<ul class="codeup">
+    <li>Coding</li>
+    <li>Exercising</li>
+    <li>Sleep</li>
 </ul>
 
 <div class="customDiv">
-  <p id="custom-p2">More words</p>
+    <p id="custom-p2">More words</p>
 </div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -31,13 +32,29 @@
 
 <script>
 
-    $('li').css('font-size', '20px');
-    $("h1, p, li").css('background-color', 'yellow');
+    // $('li').css('font-size', '20px');
+    // $("h1, p, li").css('background-color', 'yellow');
 
-   // $('.codeup').css('border','1px red solid');
+    // $('.codeup').css('border','1px red solid');
 
-  // let pTag = $('#custom-p2').html();
-  // alert(pTag);
+    // let pTag = $('#custom-p2').html();
+    // alert(pTag);
+
+    $('h1').click(()=>{
+        $('h1').css('background-color', 'red');
+    });
+
+    $('p').dblclick(function(){
+        $('p').css('font-size','18px');
+    });
+
+    $('li').mouseenter(function(){
+        $('li').css('color', 'red');
+    });
+
+    $('li').mouseleave(function(){
+        $('li').css('color', 'black');
+    });
 </script>
 </body>
 </html>
