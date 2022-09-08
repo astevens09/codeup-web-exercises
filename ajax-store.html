@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+
+    // $('#insertProducts').html('Hello');
+    (function() {
+        "use strict";
+        // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+
+        $.get('data/inventory.json')
+            .done(function(data, status, req){
+                $('#insertProducts').html(renderItems(data));
+            })
+            .fail(function(req,status,err){
+                console.log(err);
+            });
+    })();
+
+    //Render single item
+    function renderItem(item) {
+        var html = '<tr class="item">';
+        html += '<td>' + item.title+ '</td>';
+        html += '<td>' + item.quantity + '</td>';
+        html += '<td>' + item.price + '</td>';
+        // html += '<td>' + item.categories[0] + '</td>';
+        // html += item.categories.forEach(function (cat){return '<td>'+cat+'</td>'})
+        html += renderCategories(item.categories);
+        html += '</tr>';
+
+        return html;
+    }
+
+    // render all items
+    function renderItems(items) {
+        var html = '';
+        for(var i = 0; i < items.length; i++) {
+            html += renderItem(items[i]);
+        }
+        return html;
+    }
+
+    //render category properties
+    function renderCategories(cat){
+        var html = '<td>';
+        for(var i =0; i <cat.length; i++){
+            html += cat[i]+' ';
+        }
+        html += '</td>';
+        return html;
+    }
+</script>
+
+</body>
+</html>
