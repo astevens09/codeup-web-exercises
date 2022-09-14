@@ -9,12 +9,12 @@
     <!--    Mapbox links-->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
-
+    <link href="css/weatherMap.css" rel="stylesheete">
     <title>Document</title>
 </head>
 <body>
 <!--NavBar-->
-<nav class="d-flex justify-content-between">
+<nav class="d-flex justify-content-between navbar navbar-dark bg-primary">
     <h1>Weather App</h1>
     <div class="d-flex">
         <p >Current city: <p id="navCityValue"></p></p>
@@ -22,11 +22,11 @@
 </nav>
 
 <!--//City input form-->
-
+<div class="my-3">
     <label>Place</label>
     <input id="city" name="city" placeholder="Enter City">
     <button  class="btn btn-primary">Find</button>
-
+</div>
 
 <!--//Daily Weather Card-->
 <div id="weatherData" class="row  row-cols-md-5 g-4">

@@ -32,8 +32,6 @@ let cityInput = '';
             }).done(function (data,status,req){
                 // console.log(data.daily[0].dt);
                 $('#weatherData').html(renderCards(data));
-
-
             }).fail(function(status, req,err){
                 console.log(err);
             });
@@ -126,6 +124,7 @@ function renderCardData(dailyData){
     iconLink += icon;
 
     //Gather html string
+
     html+= "<div class=\"col\">\n" +
         "        <div class=\"card\">"+
         "<div class=\"card-header\">\n" +
