@@ -1,10 +1,11 @@
 
 ## Summary
-This is a collection of personal web dev exercises, test-driven developments, and scratch notes. I'm a member of the Haskell Cohort at Codeup Dallas, and this repository reflects my progress with the Full Stack course curriculum and contributes to my overall grade in the course.
+This is a collection of personal web dev exercises I've completed or currently working on at CodeUp bootcamp Dallas.
 
 ## Recent Projects
-- [AJAX Blog](https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/03%20jquery/html/ajax-blog.html)
 
+[//]: # (- [AJAX Blog]&#40;https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/03%20jquery/html/ajax-blog.html&#41;)
+This initial ReadMe was created Oct 3. Projects will be added incrementally
 ## Projects Under Construction
 
 ## Technologies Used
